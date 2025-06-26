@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Pessoas - API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Pesquisa de Pessoas</h1>
+            <p class="subtitle">Sistema de consulta de dados pessoais</p>
+        </header>
+
+        <div class="search-info">
+            <div class="update-status">
+                <span class="status-indicator"></span>
+                <span class="update-text">Última atualização: <span id="lastUpdate">--:--:--</span></span>
+            </div>
+            <div class="auto-refresh">
+                <span class="refresh-icon">🔄</span>
+                <span>Atualização automática a cada 10 segundos</span>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Carregando dados...</p>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+            <div class="results-header">
+                <h2>Resultados da Pesquisa</h2>
+                <span class="results-count" id="resultsCount">0 pessoas encontradas</span>
+            </div>
+
+            <div class="table-container">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>👤 Nome</th>
+                            <th>📧 Email</th>
+                            <th>📱 Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                        <!-- Dados serão inseridos dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
